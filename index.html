@@ -1,1 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>EcoColheita - Redução de Desperdício de Alimentos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+    <!-- CABEÇALHO DO SITE -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>🌱 EcoColheita</h1>
+                <p class="tagline">Plantando Hoje, Colhendo Amanhã</p>
+            </div>
+            <!-- Menu de navegação -->
+            <nav>
+                <ul>
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#problema">Problema</a></li>
+                    <li><a href="#dados">Dados</a></li>
+                    <li><a href="#calculadora">Calculadora</a></li>
+                    <li><a href="#solucoes">Soluções</a></li>
+                    <li><a href="#conclusao">Conclusão</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main>
+        <!-- SEÇÃO INÍCIO -->
+        <section id="inicio" class="hero">
+            <div class="container">
+                <h2>Você sabia que <span class="destaque">30% dos alimentos</span> produzidos no mundo são desperdiçados?</h2>
+                <p>Enquanto isso, milhões de pessoas passam fome. Vamos mudar essa realidade juntos!</p>
+                <a href="#calculadora" class="btn-principal">Calcule seu impacto →</a>
+            </div>
+        </section>
+
+        <!-- SEÇÃO PROBLEMA -->
+        <section id="problema" class="problema">
+            <div class="container">
+                <h2>🌍 O Problema do Desperdício</h2>
+                <div class="conteudo-problema">
+                    <article>
+                        <h3>Da plantação à sua mesa</h3>
+                        <p>O desperdício de alimentos acontece em todas as etapas: na colheita, no transporte, no armazenamento, no varejo e em nossas casas. No Brasil, cerca de <strong>41 mil toneladas de alimentos</strong> são desperdiçadas por dia.</p>
+                        <p>Esse desperdício não significa apenas comida perdida. Significa <strong>água, energia, terra e trabalho</strong> jogados fora.</p>
+                    </article>
+                    <article>
+                        <h3>Impactos ambientais</h3>
+                        <p>Alimentos apodrecendo em aterros sanitários produzem <strong>metano</strong>, um gás de efeito estufa 25 vezes mais potente que o CO₂. Além disso, toda a água usada na produção é desperdiçada.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO DADOS IMPACTANTES -->
+        <section id="dados" class="dados">
+            <div class="container">
+                <h2>📊 Números que impressionam</h2>
+                <div class="cards-dados">
+                    <div class="card">
+                        <div class="numero">30%</div>
+                        <p>de toda a comida produzida no mundo é perdida</p>
+                    </div>
+                    <div class="card">
+                        <div class="numero">41.000</div>
+                        <p>toneladas de alimentos desperdiçadas por dia no Brasil</p>
+                    </div>
+                    <div class="card">
+                        <div class="numero">25x</div>
+                        <p>mais potente que o CO₂ é o metano dos alimentos em aterros</p>
+                    </div>
+                    <div class="card">
+                        <div class="numero">1.000L</div>
+                        <p>de água são necessários para produzir 1kg de arroz</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO CALCULADORA (FUNCIONALIDADE INTERATIVA) -->
+        <section id="calculadora" class="calculadora">
+            <div class="container">
+                <h2>🧮 Calcule o impacto do desperdício</h2>
+                <p>Descubra quantos recursos são desperdiçados quando os alimentos vão para o lixo.</p>
+                
+                <div class="calculadora-container">
+                    <div class="input-area">
+                        <label for="desperdicio">Quantos kg de alimentos você desperdiça por semana?</label>
+                        <div class="input-group">
+                            <input type="number" id="desperdicio" placeholder="Ex: 2" step="0.1" min="0">
+                            <span class="unidade">kg/semana</span>
+                        </div>
+                        <button id="calcularBtn" class="btn-calcular">Calcular Impacto →</button>
+                    </div>
+                    
+                    <div class="resultado-area" id="resultadoArea">
+                        <h3>🌎 Impacto do seu desperdício por ANO:</h3>
+                        <div class="resultados">
+                            <div class="resultado-card">
+                                <div class="icone">💧</div>
+                                <div class="info">
+                                    <span class="rotulo">Água desperdiçada:</span>
+                                    <span class="valor" id="aguaResultado">0</span>
+                                    <span class="unidade">litros</span>
+                                </div>
+                            </div>
+                            <div class="resultado-card">
+                                <div class="icone">🌫️</div>
+                                <div class="info">
+                                    <span class="rotulo">CO₂ emitido:</span>
+                                    <span class="valor" id="co2Resultado">0</span>
+                                    <span class="unidade">kg</span>
+                                </div>
+                            </div>
+                            <div class="resultado-card">
+                                <div class="icone">👥</div>
+                                <div class="info">
+                                    <span class="rotulo">Pessoas alimentadas:</span>
+                                    <span class="valor" id="pessoasResultado">0</span>
+                                    <span class="unidade">pessoas/ano</span>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="observacao">* Cálculos baseados em médias globais: 1kg de alimento = 1.000L de água, 2kg CO₂, e alimenta 1 pessoa por dia.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO SOLUÇÕES -->
+        <section id="solucoes" class="solucoes">
+            <div class="container">
+                <h2>💡 Soluções sustentáveis</h2>
+                <p>Pequenas atitudes fazem uma grande diferença!</p>
+                <div class="lista-solucoes">
+                    <div class="solucao-item">
+                        <span class="emoji">🛒</span>
+                        <div>
+                            <h3>Planeje suas compras</h3>
+                            <p>Compre apenas o que você realmente vai consumir. Faça uma lista antes de ir ao mercado.</p>
+                        </div>
+                    </div>
+                    <div class="solucao-item">
+                        <span class="emoji">❄️</span>
+                        <div>
+                            <h3>Armazene corretamente</h3>
+                            <p>Aprenda a guardar cada tipo de alimento para que durem mais tempo.</p>
+                        </div>
+                    </div>
+                    <div class="solucao-item">
+                        <span class="emoji">🍲</span>
+                        <div>
+                            <h3>Aproveite integralmente</h3>
+                            <p>Use cascas, talos e sementes em receitas criativas e nutritivas.</p>
+                        </div>
+                    </div>
+                    <div class="solucao-item">
+                        <span class="emoji">🗑️</span>
+                        <div>
+                            <h3>Compostagem</h3>
+                            <p>Transforme restos orgânicos em adubo para suas plantas.</p>
+                        </div>
+                    </div>
+                    <div class="solucao-item">
+                        <span class="emoji">🤝</span>
+                        <div>
+                            <h3>Doe o excedente</h3>
+                            <p>Banco de alimentos e instituições aceitam doações de alimentos não perecíveis.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO CONCLUSÃO -->
+        <section id="conclusao" class="conclusao">
+            <div class="container">
+                <h2>🌿 Juntos podemos mudar!</h2>
+                <p>Reduzir o desperdício de alimentos é uma das ações mais poderosas que podemos tomar para construir um futuro mais sustentável.</p>
+                <p><strong>Agro forte, futuro sustentável: equilíbrio entre produção e meio ambiente</strong> - esse é o compromisso da EcoColheita.</p>
+                <div class="chamada-final">
+                    <p>🌱 Cada pequena atitude conta. Comece hoje!</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer>
+        <div class="container">
+            <p>© 2026 EcoColheita - Projeto Concurso Agrinho</p>
+            <p>Desenvolvido para conscientização sobre desperdício de alimentos</p>
+        </div>
+    </footer>
+
+    <!-- BOTÃO DE ACESSIBILIDADE (FIXO) -->
+    <div id="botaoAcessibilidade" class="botao-acessibilidade">
+        <button id="btnAcessibilidade" aria-label="Opções de acessibilidade">♿</button>
+        <div id="menuAcessibilidade" class="menu-acessibilidade escondido">
+            <button id="aumentarFonte" class="acessibilidade-btn">A+ Aumentar fonte</button>
+            <button id="diminuirFonte" class="acessibilidade-btn">A- Diminuir fonte</button>
+            <button id="altoContraste" class="acessibilidade-btn">🌓 Alto contraste</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
