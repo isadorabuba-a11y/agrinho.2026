@@ -1,1 +1,530 @@
+/* ============================================
+   ESTILOS PRINCIPAIS - ECOCOLHEITA
+   Cores: Verde Terra (#2D6A4F), Laranja Colheita (#F4A261), Bege Natural (#E9C46A)
+   ============================================ */
 
+/* RESET E CONFIGURAÇÕES GERAIS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fefcf7;
+    transition: all 0.3s ease;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ===== CABEÇALHO ===== */
+header {
+    background: linear-gradient(135deg, #2D6A4F 0%, #1B4D3A 100%);
+    color: white;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo h1 {
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+}
+
+.tagline {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+/* Menu de navegação */
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #F4A261;
+}
+
+/* ===== SEÇÃO HERO (INÍCIO) ===== */
+.hero {
+    background: linear-gradient(rgba(45,106,79,0.9), rgba(45,106,79,0.85)), url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="%23ffffff10"><rect width="100" height="100"/><circle cx="20" cy="20" r="15"/><circle cx="80" cy="60" r="10"/></svg>');
+    background-size: cover;
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.hero h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.destaque {
+    color: #F4A261;
+    background-color: rgba(0,0,0,0.3);
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-principal {
+    display: inline-block;
+    background-color: #F4A261;
+    color: #1B4D3A;
+    padding: 12px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.btn-principal:hover {
+    background-color: #E76F51;
+    transform: scale(1.05);
+    color: white;
+}
+
+/* ===== SEÇÃO PROBLEMA ===== */
+.problema {
+    padding: 60px 20px;
+    background-color: #E9C46A20;
+}
+
+.problema h2, .dados h2, .calculadora h2, .solucoes h2, .conclusao h2 {
+    text-align: center;
+    color: #2D6A4F;
+    margin-bottom: 40px;
+    font-size: 2rem;
+}
+
+.conteudo-problema {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.conteudo-problema article {
+    flex: 1;
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    border-left: 5px solid #F4A261;
+}
+
+.conteudo-problema h3 {
+    color: #2D6A4F;
+    margin-bottom: 15px;
+}
+
+/* ===== SEÇÃO DADOS (CARDS) ===== */
+.dados {
+    background-color: #2D6A4F;
+    color: white;
+    padding: 60px 20px;
+}
+
+.dados h2 {
+    color: white;
+}
+
+.cards-dados {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+}
+
+.card {
+    background-color: white;
+    color: #333;
+    padding: 30px 20px;
+    border-radius: 20px;
+    text-align: center;
+    flex: 1;
+    min-width: 200px;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.numero {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #F4A261;
+    margin-bottom: 10px;
+}
+
+/* ===== SEÇÃO CALCULADORA ===== */
+.calculadora {
+    padding: 60px 20px;
+    background-color: #fefcf7;
+}
+
+.calculadora-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+}
+
+.input-area {
+    flex: 1;
+    min-width: 280px;
+    background-color: #E9C46A30;
+    padding: 30px;
+    border-radius: 20px;
+}
+
+.input-area label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    color: #2D6A4F;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.input-group input {
+    flex: 1;
+    padding: 15px;
+    font-size: 1.1rem;
+    border: 2px solid #E9C46A;
+    border-radius: 12px;
+    outline: none;
+}
+
+.input-group input:focus {
+    border-color: #2D6A4F;
+}
+
+.unidade {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.btn-calcular {
+    background-color: #2D6A4F;
+    color: white;
+    border: none;
+    padding: 14px 25px;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+.btn-calcular:hover {
+    background-color: #1B4D3A;
+}
+
+.resultado-area {
+    flex: 1;
+    min-width: 300px;
+    background-color: #2D6A4F;
+    padding: 30px;
+    border-radius: 20px;
+    color: white;
+}
+
+.resultado-area h3 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.resultados {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.resultado-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background-color: rgba(255,255,255,0.15);
+    padding: 15px;
+    border-radius: 12px;
+}
+
+.icone {
+    font-size: 2rem;
+}
+
+.rotulo {
+    display: block;
+    font-size: 0.85rem;
+    opacity: 0.9;
+}
+
+.valor {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #F4A261;
+}
+
+.observacao {
+    font-size: 0.75rem;
+    margin-top: 15px;
+    opacity: 0.8;
+    text-align: center;
+}
+
+/* ===== SEÇÃO SOLUÇÕES ===== */
+.solucoes {
+    padding: 60px 20px;
+    background-color: #E9C46A10;
+}
+
+.solucoes p {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 1.1rem;
+}
+
+.lista-solucoes {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.solucao-item {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    margin-bottom: 25px;
+    padding: 15px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+}
+
+.emoji {
+    font-size: 2rem;
+}
+
+.solucao-item h3 {
+    color: #2D6A4F;
+    margin-bottom: 5px;
+}
+
+/* ===== SEÇÃO CONCLUSÃO ===== */
+.conclusao {
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #2D6A4F, #1B4D3A);
+    color: white;
+    text-align: center;
+}
+
+.conclusao h2 {
+    color: #F4A261;
+}
+
+.chamada-final {
+    margin-top: 30px;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+/* ===== RODAPÉ ===== */
+footer {
+    background-color: #1B4D3A;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+/* ===== BOTÃO DE ACESSIBILIDADE ===== */
+.botao-acessibilidade {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+#btnAcessibilidade {
+    background-color: #2D6A4F;
+    color: white;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    transition: transform 0.2s;
+}
+
+#btnAcessibilidade:hover {
+    transform: scale(1.1);
+}
+
+.menu-acessibilidade {
+    position: absolute;
+    bottom: 60px;
+    right: 0;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 170px;
+}
+
+.menu-acessibilidade.escondido {
+    display: none;
+}
+
+.acessibilidade-btn {
+    background-color: #E9C46A;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+.acessibilidade-btn:hover {
+    background-color: #F4A261;
+}
+
+/* ===== MODO ALTO CONTRASTE ===== */
+body.alto-contraste {
+    background-color: black;
+    color: yellow;
+}
+
+body.alto-contraste header,
+body.alto-contraste .dados,
+body.alto-contraste .conclusao,
+body.alto-contraste footer {
+    background-color: black;
+    border: 2px solid yellow;
+}
+
+body.alto-contraste .card,
+body.alto-contraste .solucao-item,
+body.alto-contraste .conteudo-problema article {
+    background-color: #222;
+    color: yellow;
+    border: 1px solid yellow;
+}
+
+body.alto-contraste a,
+body.alto-contraste .btn-principal,
+body.alto-contraste .btn-calcular {
+    background-color: yellow;
+    color: black;
+}
+
+body.alto-contraste .numero,
+body.alto-contraste .valor {
+    color: yellow;
+}
+
+/* ===== FONTES AJUSTÁVEIS ===== */
+body.fonte-pequena {
+    font-size: 14px;
+}
+
+body.fonte-normal {
+    font-size: 16px;
+}
+
+body.fonte-grande {
+    font-size: 18px;
+}
+
+body.fonte-muito-grande {
+    font-size: 20px;
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    
+    nav ul {
+        justify-content: center;
+        gap: 15px;
+    }
+    
+    .hero h2 {
+        font-size: 1.5rem;
+    }
+    
+    .cards-dados {
+        flex-direction: column;
+    }
+    
+    .calculadora-container {
+        flex-direction: column;
+    }
+    
+    .resultado-card {
+        flex-wrap: wrap;
+        text-align: center;
+        justify-content: center;
+    }
+    
+    .conteudo-problema {
+        flex-direction: column;
+    }
+    
+    .solucao-item {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+}
